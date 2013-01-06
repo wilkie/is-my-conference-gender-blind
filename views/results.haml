@@ -1,0 +1,29 @@
+%h2
+  Is my conference gender blind?
+
+%table.inset
+  %tr
+    %td.header
+      \% of women developers
+    %td.header
+      \# of women speaking
+    %td.header
+      \# of total speakers
+  %tr
+    %td.input
+      %div
+        =@percent_women
+    %td.input
+      %div
+        =@num_women
+    %td.input
+      %div
+        =@total
+  %tr
+    %td{:colspan => "3"}
+      %ul
+        - @probs.each do |p|
+          %li=p
+      %ul
+        - @rolls.each do |r|
+          %li=r
