@@ -46,6 +46,18 @@ class Blog < Sinatra::Base
       @rolls << simple_percent unless i == 0
     end
 
+    @percent_women = params[:p].to_f
+
+    @prob_of_lineup = @probs[@num_women]
+
+    @expected_women = (@total * @percent_women / 100.0).floor
+
+    @prob_over_represent = @rolls[@expected_women]
+
+    @is_overrepresented = @num_women > @expected_women
+
+    @more_prob_to_overrepresent = @prob_over_represent > @prob_of_lineup && !@is_overrepresented
+
     haml :results
   end
 end

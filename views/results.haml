@@ -21,9 +21,36 @@
         =@total
   %tr
     %td{:colspan => "3"}
+      %h3
+        Statistics for a conference with #{@total} speakers
+      %table.results
+        %tr
+          %td
+            .graph#prob
+          %td
+            .graph#roll
+
+      %h3
+        Conclusions
+
       %ul
-        - @probs.each do |p|
-          %li=p
-      %ul
-        - @rolls.each do |r|
-          %li=r
+        %li
+          The probability of having #{@num_women} #{@num_women == 1 ? "woman" : "women"} is #{@prob_of_lineup}%.
+        %li
+          The probability of over-representing women is #{@prob_over_represent}%
+        - if @more_prob_to_overrepresent
+          %li
+            It is more likely to over-represent women than to have this lineup.
+        - if @is_overrepresented
+          %li
+            This lineup more than represents women given the reported percentage.
+            
+
+  %input{:type=>"hidden", :name=>"total", :id=>"total", :value=>@total}
+  %input{:type=>"hidden", :name=>"num_women", :id=>"num_women", :value=>@num_women}
+  %input{:type=>"hidden", :name=>"percent_women", :id=>"percent_women", :value=>@percent_women}
+  - @probs.each_with_index do |p,i|
+    %input{:type=>"hidden", :name=>"prob_#{i}", :id=>"prob_#{i}", :value=>p}
+  - @rolls.each_with_index do |r,i|
+    %input{:type=>"hidden", :name=>"roll_#{i}", :id=>"roll_#{i}", :value=>r}
+  %script{:src=>"/javascript/graph.js"}
