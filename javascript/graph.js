@@ -4,6 +4,8 @@ function update_plots(options) {
   $('#header h2 .group').val(options.g);
   $('#header h2 .adjective').val(options.a);
 
+  window.document.title = "Is "+options.g+" blind to "+options.a+"?";
+
   $('#input_headers .noun').val(options.n);
   $('#input_headers .verb').val(options.v);
 
