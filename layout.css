@@ -134,3 +134,11 @@ h3 input {
 #blog_link {
   color: #d8d8d8;
 }
+
+#blog_link ul li:nth-child(odd) {
+  margin-bottom: 10px;
+}
+
+#blog_link ul li:nth-child(even) {
+  margin-bottom: 30px;
+}
