@@ -22,9 +22,11 @@ function update_plots(options) {
   var p_value = values.probs[options.s][1];
   var p_this = values.rolls[options.s][1];
   var over_representation = Math.floor(options.t*options.p);
+  var expected = Math.floor(options.t * options.p);
   var p_gt_value = values.rolls[over_representation][1];
 
   $('#conclusions ul li.p').text("The probability of having "+options.s+" "+options.n+" "+options.v+" is "+ p_value + "%");
+  $('#conclusions ul li.e').text("You would expect "+expected+" "+options.n+" with a probability of "+values.probs[expected][1]+"%");
   $('#conclusions ul li.p_gt').text("The probability of coincidentally over-representing "+options.n+" is "+ p_gt_value + "%");
 
   var group_caps = options.g.charAt(0).toUpperCase() + options.g.slice(1);
