@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]> <html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]> <html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]> ><! <![endif]-->
+<html lang='en'>
+  <!-- <![endif] -->
+  <head>
+    <meta charset='utf8' />
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport' />
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata|Forum|Metrophobic|Wire+One' rel='stylesheet' type='text/css' />
+    <link href='reset.css' rel='stylesheet' type='text/css' />
+    <link href='layout.css' rel='stylesheet' type='text/css' />
+    <title>Is my conference gender blind?</title>
+  </head>
+  <body> table
+    <div id='content'>
+      <div id='header'>
+        <h2>
+          Is <input class="group"> blind to <input class="adjective">?
+        </h2>
+      </div>
+      <div id='input_headers'>
+        <div class='header percent'>
+          % population of <input class="noun">
+        </div>
+        <div class='header sample'>
+          # of <input class="noun"> <input class="verb">
+        </div>
+        <div class='header total'>
+          # of <input class="noun"> <input class="verb">
+        </div>
+      </div>
+      <div id='inputs'>
+        <input class="percent">
+        <input class="sample">
+        <input class="total">
+      </div>
+      <div id='result_header'>
+        <h3>
+          Statistics given <span class="total">55</span> <input class="verb">
+        </h3>
+      </div>
+      <div id='results'>
+        <div>
+          <div class='graph' id='prob'></div>
+        </div>
+        <div>
+          <div class='graph' id='roll'></div>
+        </div>
+      </div>
+      <div id='conclusions_header'>
+        <h3>
+          Conclusions
+        </h3>
+      </div>
+      <div id='conclusions'>
+        <ul>
+          <li class='p'>
+          </li>
+          <li class='p_gt'>
+          </li>
+          <li class='takeaway'>
+          </li>
+        </ul>
+      </div>
+      <div id='link_header'>
+        <h3>
+          Share
+        </h3>
+      </div>
+      <div id='link'>
+        http://wilkie.github.io/is-my-conference-gender-blind?foo
+      </div>
+      <div id='blog_link_header'>
+        <h3>
+          Read more
+        </h3>
+      </div>
+      <div id='blog_link'>
+        <a href="http://wilkie.io/posts/conference_diversity">Conferences Must Be Active to Promote Diversity</a> - A discussion of the math and conclusions used here.
+      </div>
+    </div>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+    <script src='javascript/jquery.flot.js'></script>
+    <script src='javascript/graph.js'></script>
+  </body>
+</html>

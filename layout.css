@@ -1,0 +1,136 @@
+body, html {
+  background-color: #333;
+  background-image: url('noise_black.png');
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: visible;
+}
+
+#content {
+  width: 880px;
+  margin: 0 auto 0 auto;
+}
+
+h1 {
+  margin-top: 30px;
+  font-size: 6em;
+  margin-bottom: 100px;
+}
+
+h2 {
+  margin-top: 30px;
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+
+h2 input {
+  font-family: serif;
+  font-size: 1em;
+  color: #d8d8d8;
+  background: none;
+  border: none;
+}
+
+h3, h3 input {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+}
+
+h3 input {
+  font-size: 1em;
+}
+
+#input_headers div {
+  display: inline-block;
+  width: 30%;
+}
+
+#input_headers div input {
+  display: inline-block;
+  font-size: 1em;
+  font-family: serif;
+  color: #d8d8d8;
+  background: none;
+  border: none;
+}
+
+.header, h1, h2, h3, #result_header input {
+  color: #d8d8d8;
+  font-family: serif;
+  background: none;
+  border: none;
+  text-shadow: 0.0em 0.0em 0.07em #111;
+}
+
+#results {
+  width: 100%;
+
+  margin-bottom: 30px;
+}
+
+#conclusions ul li {
+  color: #edc240;
+  margin-bottom: 30px;
+}
+
+#inputs input,
+#inputs div {
+  display: inline-block;
+
+  font-size: 6em;
+  width: 30%;
+  text-align: center;
+  background-color: #333;
+  border: none;
+  color: #73aee1;
+  font-family: "Metrophobic", verdana;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  padding: 0;
+  font-size: 3em;
+  height: 1.2em;
+  background: none;
+}
+
+.submit {
+  font-size: 3em;
+  color: #73aee1;
+
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#results {
+  text-align: center;
+}
+
+#results > div {
+  width: 40%;
+  display: inline-block;
+}
+
+#results > div:first-child {
+  margin-right: 10%;
+}
+
+.graph {
+  width: 100%;
+  display: inline-block;
+}
+
+#link, #blog_link, #blog_link a {
+  color: #73aee1;
+  padding-bottom: 30px;
+}
+
+#blog_link {
+  color: #d8d8d8;
+}
